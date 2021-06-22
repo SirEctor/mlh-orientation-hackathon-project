@@ -43,6 +43,8 @@ def login():
 
 app.route('/register', methods=('GET', 'POST'))
 def register():
+    return render_template('index.html'), 200
+    '''
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -70,7 +72,7 @@ def register():
 
     ## TODO: Return a register page
     return "Register Page not yet implemented", 501
-
+    '''
 
 
 @app.route('/')
