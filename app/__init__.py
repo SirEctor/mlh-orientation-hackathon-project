@@ -36,15 +36,15 @@ def login():
         else:
             return error, 418
     
-    ## TODO: Return a login page
+    ## tODO: Return a login page
     return "Login Page not yet implemented", 501
 
 
 
-app.route('/register', methods=('GET', 'POST'))
+@app.route('/register', methods=('GET', 'POST'))
 def register():
-    return render_template('index.html'), 200
-    '''
+    #return render_template('index.html'), 200
+    
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -70,9 +70,9 @@ def register():
         else:
             return error, 418
 
-    ## TODO: Return a register page
+    ### tODO: Return a register page
     return "Register Page not yet implemented", 501
-    '''
+    
 
 
 @app.route('/')
