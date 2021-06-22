@@ -17,6 +17,8 @@ def all_good():
 
 @app.route('/login', methods=('GET', 'POST'))
 def login():
+    return render_template('index.html'), 200
+    '''
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -41,12 +43,12 @@ def login():
 
     if request.method == 'GET':
         return "Login Page not yet implemented", 501
-
+    '''
 
 @app.route('/register', methods=('GET', 'POST'))
 def register():
-    #return render_template('index.html'), 200
-    
+    return render_template('index.html'), 200
+    '''
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -74,7 +76,7 @@ def register():
 
     ### tODO: Return a register page
     return "Register Page not yet implemented", 501
-    
+    '''
 
 
 @app.route('/')
