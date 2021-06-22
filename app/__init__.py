@@ -39,6 +39,8 @@ def login():
     ## tODO: Return a login page
     return "Login Page not yet implemented", 501
 
+    if request.method == 'GET':
+        return "Login Page not yet implemented", 501
 
 
 @app.route('/register', methods=('GET', 'POST'))
