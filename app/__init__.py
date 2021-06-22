@@ -11,9 +11,29 @@ app = Flask(__name__)
 app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 db.init_app(app)
 
-@app.route('/login')
-def login_user():
-    return render_template('index.html'), 200
+@app.route('/login', methods=('GET', 'POST'))
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        db = get_db()
+        error = None
+        user = db.execute(
+            'SELECT * FROM user WHERE username = ?', (username,)
+        ).fetchone()
+
+        if user is None:
+            error = 'Incorrect username.'
+        elif not check_password_hash(user['password'], password):
+            error = 'Incorrect password.'
+
+        if error is None:
+            return "Login Successful", 200 
+        else:
+            return error, 418
+    
+    ## TODO: Return a login page
+    return "Login Page not yet implemented", 501
 
 
 
