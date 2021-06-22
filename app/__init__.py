@@ -11,6 +11,10 @@ app = Flask(__name__)
 app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 db.init_app(app)
 
+@app.route('/health')
+def all_good():
+    return render_template('index.html'), 200
+
 @app.route('/login', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
@@ -64,13 +68,10 @@ def register():
         else:
             return error, 418
 
-    ## TODO: Return a restister page
+    ## TODO: Return a register page
     return "Register Page not yet implemented", 501
 
 
-@app.route('/health')
-def all_good():
-    return render_template('index.html'), 200
 
 @app.route('/')
 def index():
