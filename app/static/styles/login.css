@@ -401,19 +401,44 @@ footer {
 }
 
 input[type=text] {
-    transition: width 0.4s ease-in-out;
+    transition: width 4s ease-in-out;
+}
+
+#usernameID{
+  width: 350px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  background-position: 5px 5px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 70px;
+  background-image: url('../img/userSil.png');
 }
 
 input[type=text]:focus {
-    background-color: lightgreen;
     width: 100%;
 }
 
 input[type=password] {
-    transition: width 0.4s ease-in-out;
+    transition: width 4s ease-in-out;
+}
+
+#passwordID{
+  width: 350px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  background-position: 5px 5px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 70px;
+  background-image: url('../img/key.png');
+  
 }
 
 input[type=password]:focus {
-    background-color: lightgreen;
     width: 100%;
 }
