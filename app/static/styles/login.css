@@ -413,7 +413,7 @@ input[type=text] {
   background-color: white;
   background-position: 5px 5px; 
   background-repeat: no-repeat;
-  padding: 12px 20px 12px 70px;
+  padding: 12px 20px 12px 50px;
   background-image: url('../img/userSil.png');
 }
 
@@ -434,11 +434,24 @@ input[type=password] {
   background-color: white;
   background-position: 5px 5px; 
   background-repeat: no-repeat;
-  padding: 12px 20px 12px 70px;
+  padding: 12px 20px 12px 50px;
   background-image: url('../img/key.png');
   
 }
 
 input[type=password]:focus {
     width: 100%;
+}
+
+#loginForm{
+  text-align: center;
+  margin-top: 20px;
+}
+
+#submitLoginBtn {
+  margin-bottom: 20px;
+}
+
+#loginFormTitle{
+  text-align: center;
 }

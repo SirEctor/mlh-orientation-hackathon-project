@@ -26,22 +26,17 @@
 
   <body>
     <!-- Home Page -->
-    <header class="header-container">
-      <div class="header-sections">
-        <a href="../index.html/#home">Home</a>
-      </div>
-    </header>
-
+   
     <section id="loginSection">
         <br>
         <br>
-        <h1 id="loginTitle">Login Form</h1>
-        <form action="../login/" method="POST">
+        <h1 id="loginTitle" id="loginFormTitle">Login Form</h1>
+        <form action="../login/" method="POST" id="loginForm">
             <label for="uname">Username:</label><br>
             <input type="text" id="usernameID" name="username" value=""><br>
             <label for="password">Password:</label><br>
             <input type="password" id="passwordID" name="password" value="" ><br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" id="submitLoginBtn">
         </form>
     </section>
     
