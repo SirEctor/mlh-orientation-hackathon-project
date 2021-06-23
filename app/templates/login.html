@@ -22,6 +22,7 @@
     <link rel='stylesheet' href="{{'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'}}">
     <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
     <title>Ebenezer Teshome's Personal Portfolio</title>
+
   </head>
 
   <body>
@@ -30,7 +31,7 @@
     <section id="loginSection">
         <br>
         <br>
-        <h1 id="loginTitle" id="loginFormTitle">Login Form</h1>
+        <h1 id="loginTitle">Login Form</h1>
         <form action="../login/" method="POST" id="loginForm">
             <label for="uname">Username:</label><br>
             <input type="text" id="usernameID" name="username" value=""><br>
@@ -40,13 +41,13 @@
         </form>
     </section>
     
-   
+    
     <footer id="contact">
       <div class="social">   
         <a href="https://github.com/SirEctor" target="_blank">
           <img src= "{{url_for('static', filename='img/github.png')}}" alt="gihub_logo"/>
         </a>
-        <a href="https://www.linkedin.com/in/joey-cam/" target="_blank">
+        <a href="https://www.linkedin.com/in/ebenezer-teshome/" target="_blank">
           <img src= "{{url_for('static', filename='img/linkedin.png')}}" alt="linkedin_logo"/>
         </a>
         <a href="https://drive.google.com/file/d/12Ge6cDQZ6QflZ4gXUqw72zJKE9RXsbKh/view?usp=sharing" target="_blank">
@@ -54,6 +55,7 @@
         </a>
       </div>
     </footer>
+    
     
 </body>
 </html>
