@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, abort, request
 from dotenv import load_dotenv
 from . import db
 from werkzeug.security import generate_password_hash
@@ -15,7 +15,7 @@ db.init_app(app)
 def all_good():
     return render_template('index.html'), 200
 
-@app.route('/login', methods=('GET', 'POST'))
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     #return render_template('index.html'), 200
     
@@ -36,19 +36,20 @@ def login():
         if error is None:
             return "Login Successful", 200 
         else:
-            return error, 418
+            return abort(418, description=error)
     
     ## tODO: Return a login page
-    return "Login Page not yet implemented", 501
+    return abort(501, description="Login Page not yet implemented")
+    #return "Login Page not yet implemented", 501
 
     
 
-@app.route('/register', methods=('GET', 'POST'))
+@app.route('/register/',methods = ['POST', 'GET'])
 def register():
     #return render_template('index.html'), 200
     if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
+        username = request.form['username']
+        password = request.form['password']
         db = get_db()
         error = None
 
@@ -69,12 +70,38 @@ def register():
             db.commit()
             return f"User {username} created successfully"
         else:
-            return error, 418
-
+            return error,418
+    return  "Register Page not yet implemented - "+ request.method, 501
+    #return "Register Page not yet implemented", 501
     ### tODO: Return a register page
-    return "Register Page not yet implemented", 501
-    
+        
+@app.route('/test/', methods=['GET','POST'])    
+def test(request):
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        db = get_db()
+        error = None
 
+        if not username:
+            error = 'Username is required.'
+        elif not password:
+            error = 'Password is required.'
+        elif db.execute(
+            'SELECT id FROM user WHERE username = ?', (username,)
+        ).fetchone() is not None:
+            error = f"User {username} is already registered."
+
+        if error is None:
+            db.execute(
+                'INSERT INTO user (username, password) VALUES (?, ?)',
+                (username, generate_password_hash(password))
+            )
+            db.commit()
+            return f"User {username} created successfully"
+        else:
+            return error,418
+    return "TEST PAGE", 501
 
 @app.route('/')
 def index():

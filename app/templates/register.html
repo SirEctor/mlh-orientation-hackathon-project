@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta property="og:title" content="Personal Portfolio" />
+    <meta property="og:description" content="My Personal Portfolio" />
+    <meta property="og:url" content="{{ url }}" />
+
+    <link rel='preconnect' href="{{'https://fonts.gstatic.com'}}">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel='stylesheet' href="{{'https://fonts.googleapis.com/css2?family=Pacifico&display=swap'}}">
+    
+    <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+    <link rel='stylesheet' href="{{'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'}}">
+    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+    <title>Ebenezer Teshome's Personal Portfolio</title>
+  </head>
+
+  <body>
+    <!-- Home Page -->
+    <header class="header-container">
+      <div class="header-sections">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <section id="home" class="hero-container">
+      <div class="hero-img">
+        <img src= "{{url_for('static', filename='img/prompt.png')}}" alt="prompt_img" />
+      </div>
+      <div class="hero-info">
+        <h1>Hello,</h1>
+        <h1>I'm a <span class="hero-subject">hacker</span></h1>
+        <div class="hero-contact">
+          <a href="https://github.com/SirEctor" target="_blank">
+            <img src= "{{url_for('static', filename='img/github.png')}}" alt="gihub_logo"/>
+          </a>
+          <a href="https://www.linkedin.com/in/joey-cam/" target="_blank">
+            <img src= "{{url_for('static', filename='img/linkedin.png')}}" alt="linkedin_logo"/>
+          </a>
+          <a href="https://drive.google.com/file/d/12Ge6cDQZ6QflZ4gXUqw72zJKE9RXsbKh/view?usp=sharing" target="_blank">
+            <img src= "{{url_for('static', filename='img/resume.png')}}" alt="resume_logo"/>
+          </a>
+        </div>
+      </div>
+    </section>
+
+      {% block about_section %}{% endblock %}
+      {% block about_content %}{% endblock %}
+      {% block about_technologies %}{% endblock %}
+      {% block about_jobs %}{% endblock %}
+
+    <br>
+    <!-- Project Section -->
+    <section id="projects">
+      <!-- The Modal -->
+      <div id="projectModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modalP">
+            This is where the extended version of the description of a project
+            should go.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-section-class">
+        <h2 id="projectSectionText">Projects I've Worked On</h2>
+        <br>
+        <div class="card">
+          <img
+            src="{{url_for('static', filename='../static/img/project1.png')}}"
+            alt="Project 1 Image"
+            style="width: 30%"
+          />
+          <div class="container">
+            <h4><b>Project 1</b></h4>
+            <button onclick="openModal(1)">Read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="{{url_for('static', filename='../static/img/project2.png')}}"
+            alt="Project 2 Image"
+            style="width: 26.5%"
+          />
+          <div class="container">
+            <h4><b>Project 2</b></h4>
+            <button onclick="openModal(2)">Read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="{{url_for('static', filename='../static/img/project3.png')}}"
+            alt="Project 3 Image"
+            style="width: 27%"
+          />
+          <div class="container">
+            <h4><b>Project 3</b></h4>
+            <button onclick="openModal(3)">Read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="{{url_for('static', filename='../static/img/project4.png')}}"
+            alt="Project 4 Image"
+            style="width: 30%"
+          />
+          <div class="container">
+            <h4><b>Project 4</b></h4>
+            <button onclick="openModal(4)">Read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="{{url_for('static', filename='../static/img/project5.png')}}"
+            alt="Project 5 Image"
+            style="width: 35%"
+          />
+          <div class="container">
+            <h4><b>Project 5</b></h4>
+            <button onclick="openModal(5)">Read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="{{url_for('static', filename='../static/img/project6.png')}}"
+            alt="Project 6 Image"
+            style="width: 35%"
+          />
+          <div class="container">
+            <h4><b>Project 6</b></h4>
+            <button onclick="openModal(6)">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <footer id="contact">
+      <div class="social">   
+        <a href="https://github.com/SirEctor" target="_blank">
+          <img src= "{{url_for('static', filename='img/github.png')}}" alt="gihub_logo"/>
+        </a>
+        <a href="https://www.linkedin.com/in/joey-cam/" target="_blank">
+          <img src= "{{url_for('static', filename='img/linkedin.png')}}" alt="linkedin_logo"/>
+        </a>
+        <a href="https://drive.google.com/file/d/12Ge6cDQZ6QflZ4gXUqw72zJKE9RXsbKh/view?usp=sharing" target="_blank">
+          <img src= "{{url_for('static', filename='img/resume.png')}}" alt="resume_logo"/>
+        </a>
+      </div>
+    </footer>
+    
+    <script src="{{url_for('static', filename='../static/js/modal.js')}}"></script>
+    <script src="{{url_for('static', filename='../static/js/main.js')}}"></script>
+</body>
+</html>
