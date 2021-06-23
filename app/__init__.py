@@ -71,7 +71,7 @@ def register():
             return f"User {username} created successfully"
         else:
             return error,418
-    return  "Register Page not yet implemented - "+ request.method, 501
+    return render_template('register.html'), 200
     #return "Register Page not yet implemented", 501
     ### tODO: Return a register page
         
