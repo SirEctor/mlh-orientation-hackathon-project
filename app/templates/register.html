@@ -18,9 +18,9 @@
     />
     <link rel='stylesheet' href="{{'https://fonts.googleapis.com/css2?family=Pacifico&display=swap'}}">
     
-    <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+    <link lang="sass" rel="stylesheet" href="../static/styles/projects.css" />
     <link rel='stylesheet' href="{{'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'}}">
-    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon" />
     <title>Ebenezer Teshome's Personal Portfolio</title>
   </head>
 
@@ -28,18 +28,23 @@
     <!-- Home Page -->
     <header class="header-container">
       <div class="header-sections">
-        <a href="./index.html/#home">Home</a>
+        <a href="../">Home</a>
+        <a href="../about">About</a>
+        <a href="../projects">Projects</a>
+        <a href="../register">Register</a>
+        <a href="../login">Login</a>
+        <a href="../contact">Contact</a>
       </div>
     </header>
 
     <section id="registerSection">
-        <h1>Registration Form</h1>
-        <form action="../register/" method="POST">
+        <h1 class="titleS">Registration Form</h1>
+        <form action="../register/" method="POST" class="forms">
             <label for="uname">Username:</label><br>
             <input type="text" id="usernameID" name="username" value=""><br>
             <label for="password">Password:</label><br>
             <input type="password" id="passwordID" name="password"  value="" ><br><br>
-            <input type="submit" value="Submit">
+            <button type="submit" id="submitLoginBtn" class="button"><span>SUBMIT</span></button>
         </form>
     </section>
     
