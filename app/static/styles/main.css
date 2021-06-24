@@ -386,6 +386,10 @@ ul.list-of-tech {
     width: 100%;
   }
 
+  .job-section {
+    margin-bottom: 40px;
+  }
+
   .about-technology {
     margin: auto;
     width: 80%;
