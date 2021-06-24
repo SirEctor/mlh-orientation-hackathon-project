@@ -14,6 +14,10 @@ button {
   margin: 0;
 }
 
+body{
+  background-color: #ebf6ff;
+}
+
 /* Header */
 .header-sections {
   background-color: white;
@@ -457,4 +461,14 @@ input[type=password]:focus {
 
 #loginTitle{
   text-align: center;
+}
+
+#loginSection{
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -150px;
 }
