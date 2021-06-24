@@ -55,6 +55,7 @@ button {
 
   h1 {
     font-size: 34px;
+    text-align: center;
   }
 
   h2 {
@@ -466,6 +467,12 @@ input[type=password]:focus {
   color: white;
 }
 
+#submitRegisterBtn {
+    margin-bottom: 20px;
+    color: white;
+    left: 0%;
+}
+
 .titleS{
   text-align: center;
 }
@@ -481,6 +488,17 @@ input[type=password]:focus {
   color: white;
 }
 
+#registerSection{
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -150px;
+    color: white;
+  }
+  
 html, body {
   width: 100%;
   height:100%;
