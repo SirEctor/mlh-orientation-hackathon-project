@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory, abort, request
+from flask import Flask, render_template, send_from_directory, abort, request, redirect
 from dotenv import load_dotenv
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -10,6 +10,10 @@ load_dotenv()
 app = Flask(__name__)
 app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 db.init_app(app)
+
+@app.route('/contact/')
+def contact():
+    return redirect("https://http.cat/501")
 
 @app.route('/about/')
 def about():
