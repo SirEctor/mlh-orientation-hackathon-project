@@ -468,6 +468,7 @@ input[type=password]:focus {
   left: 50%;
   margin-top: -180px;
   margin-left: -150px;
+  color: white;
 }
 
 html, body {
@@ -476,7 +477,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #f9ad92, #faf883, #66e57b, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -536,7 +537,7 @@ div.formCorrect label       { text-align:left; }
 }
 
 .button:hover span {
-  padding-right: 25px;
+  padding-right: 20px;
 }
 
 .button:hover span:after {

@@ -11,6 +11,9 @@ app = Flask(__name__)
 app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 db.init_app(app)
 
+@app.route('/projects/')
+def project():
+    return render_template('projects.html')
 @app.route('/health')
 def all_good():
     return render_template('index.html'), 200
