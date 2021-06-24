@@ -20,7 +20,7 @@
     
     <link lang="sass" rel="stylesheet" href="../static/styles/login.css" />
     <link rel='stylesheet' href="{{'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'}}">
-    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon" />
     <title>Ebenezer Teshome's Personal Portfolio</title>
 
   </head>
@@ -29,15 +29,16 @@
     <!-- Home Page -->
    
     <section id="loginSection">
-        <br>
-        <br>
+        
         <h1 id="loginTitle">Login Form</h1>
         <form action="../login/" method="POST" id="loginForm">
+          <div class="formCorrect">
             <label for="uname">Username:</label><br>
             <input type="text" id="usernameID" name="username" value=""><br>
             <label for="password">Password:</label><br>
             <input type="password" id="passwordID" name="password" value="" ><br><br>
-            <input type="submit" value="Submit" id="submitLoginBtn">
+            <button type="submit" id="submitLoginBtn" class="button"><span>SUBMIT</span></button>
+          </div>
         </form>
     </section>
     

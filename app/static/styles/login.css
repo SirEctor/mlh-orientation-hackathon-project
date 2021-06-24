@@ -466,7 +466,7 @@ input[type=password]:focus {
   height: 200px;
   top: 50%;
   left: 50%;
-  margin-top: -200px;
+  margin-top: -180px;
   margin-left: -150px;
 }
 
@@ -491,4 +491,55 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+
+div.formCorrect {
+  display:grid;
+  grid-template-columns: max-content max-content;
+  grid-gap:5px;
+}
+div.formCorrect label       { text-align:left; }
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6dc7bf;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  left: 35%
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
