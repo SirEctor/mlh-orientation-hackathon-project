@@ -28,13 +28,14 @@
     <!-- Home Page -->
     <header class="header-container">
       <div class="header-sections">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="../">Home</a>
+        <a href="../about">About</a>
         <a href="../projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
     </header>
 
+    <!-- Home Section -->
     <section id="home" class="hero-container">
       <div class="hero-img">
         <img src= "{{url_for('static', filename='img/prompt.png')}}" alt="prompt_img" />
@@ -56,12 +57,7 @@
       </div>
     </section>
 
-      {% block about_section %}{% endblock %}
-      {% block about_content %}{% endblock %}
-      {% block about_technologies %}{% endblock %}
-      {% block about_jobs %}{% endblock %}
-
-    <br>
+   
     
     <footer id="contact">
       <div class="social">   

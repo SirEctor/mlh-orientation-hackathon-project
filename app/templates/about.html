@@ -1,0 +1,113 @@
+<head>
+    <link lang="sass" rel="stylesheet" href="../static/styles/main.css" />
+</head>
+<body>
+<!-- Home Page -->
+<header class="header-container">
+    <div class="header-sections">
+      <a href="../">Home</a>
+      <a href="../about">About</a>
+      <a href="../projects">Projects</a>
+      <a href="../#contact">Contact</a>
+    </div>
+  </header>
+<!-- About Section -->
+
+<div class="about-container">
+  <h1 id="about-section-title"> Who Am I? </h1>
+    <div class="profile-image">
+      <img id="image" src="../static/img/logo.jpg">
+    </div>
+  <div class="about-row">
+    <div id="description"> 
+      <p class="about-description">
+        I'm <span id="name">Bobby</span> from <i class="fas fa-map-marker-alt fa-lg"></i> <span id="location">Queensland, Australia</span> and I'm a student at the <a id="work-link" href="https://www.uq.edu.au/">University of Queensland</a>. <br>
+        These days I am learning <span class="interest">web development</span> and <span class="interest">new javascript frameworks</span>. <br>
+        My interests are learning <span class="tooltip">German<span class="tooltiptext">Das kannst du deiner Oma erzählen.</span></span>, <span class="tooltip">playing squash<span class="tooltiptext">Apparently, Squash players are highly educated; 98% are college graduates and 57% have graduate degrees. 🤷</span></span>, and <span class="tooltip">surfing<span class="tooltiptext">🤙🤙🤙</span></span>. <br>
+        <a id="fun-fact-hover">Fun Fact about me:</a> <span id="fun-fact">I've been surfing since I was 2 years old &#127940;</span>
+      </p>
+    </div> 
+  </div>
+  <div class="about-technologies">
+    <p class="about-technologies-title">Here are a few technologies I've been working with recently:</p>
+    <ul class="list-of-tech">
+      <li>Flask</li>
+      <li>Python</li>
+      <li>Node.js</li>
+      <li>React.js</li>
+      <li>Wordpress</li>
+      <li>Java</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="job-section">
+  <h2 class="job-section-title">Some Places I've Worked At</h2>
+  <div class="tab">
+    <button class="tablinks" onclick="openJob(event, 'job')" id="defaultOpen">Job</button>
+    <button class="tablinks" onclick="openJob(event, 'internship1')">Internship 1</button>
+    <button class="tablinks" onclick="openJob(event, 'internship2')">Internship 2</button>
+    <button class="tablinks" onclick="openJob(event, 'volunteer')">Volunteer</button>
+  </div>
+
+  <div id="job" class="tabcontent">
+    <h3 class="job-title">Web Developer</h3>
+      <ul class="list-duties">
+        <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+        <li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li>
+        <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
+        <li>Stay up-to-date on technology</li>
+      </ul>
+  </div>
+
+<div id="internship1" class="tabcontent">
+  <h3 class="job-title">Internship 1</h3>
+    <ul class="list-duties">
+      <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+      <li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li>
+      <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
+      <li>Stay up-to-date on technology</li>
+    </ul>
+</div>
+
+<div id="internship2" class="tabcontent">
+  <h3 class="job-title">Internship 2</h3>
+  <ul class="list-duties">
+    <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+    <li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li>
+    <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
+    <li>Stay up-to-date on technology</li>
+  </ul>
+</div>
+
+<div id="volunteer" class="tabcontent">
+  <h3 class="job-title">Volunteer</h3>
+  <ul class="list-duties">
+    <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+    <li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify</li>
+    <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
+    <li>Stay up-to-date on technology</li>
+  </ul>
+</div>
+
+</div>
+
+
+<footer id="contact">
+    <div class="social">   
+      <a href="https://github.com/SirEctor" target="_blank">
+        <img src= "{{url_for('static', filename='img/github.png')}}" alt="gihub_logo"/>
+      </a>
+      <a href="https://www.linkedin.com/in/joey-cam/" target="_blank">
+        <img src= "{{url_for('static', filename='img/linkedin.png')}}" alt="linkedin_logo"/>
+      </a>
+      <a href="https://drive.google.com/file/d/12Ge6cDQZ6QflZ4gXUqw72zJKE9RXsbKh/view?usp=sharing" target="_blank">
+        <img src= "{{url_for('static', filename='img/resume.png')}}" alt="resume_logo"/>
+      </a>
+    </div>
+</footer>
+
+<script src="{{url_for('static', filename='../static/js/main.js')}}"></script>
+
+</body>
