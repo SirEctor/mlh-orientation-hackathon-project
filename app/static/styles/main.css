@@ -28,12 +28,12 @@ button {
   width: 100%;
   z-index: 1;
   top: 0;
+  font-family: 'Abel', sans-serif;
 }
 
 .header-sections a {
   color: #808080;
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
   padding: 20px 60px;
   text-decoration: none;
 }
@@ -66,7 +66,6 @@ button {
 
 .hero-info h1 {
   font-size: 50px;
-  font-family: "Roboto", sans-serif;
   padding-bottom: 10px;
 }
 

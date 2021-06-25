@@ -24,12 +24,12 @@ button {
   position: fixed;
   width: 100%;
   z-index: 1;
+  font-family: 'Abel', sans-serif;
 }
 
 .header-sections a {
   color: #808080;
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
   padding: 20px 60px;
   text-decoration: none;
 }
