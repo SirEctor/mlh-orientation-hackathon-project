@@ -11,6 +11,10 @@ app = Flask(__name__)
 app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 db.init_app(app)
 
+@app.route('/game/')
+def game():
+    return render_template('game.html')
+
 @app.route('/contact/')
 def contact():
     return redirect("https://http.cat/501")

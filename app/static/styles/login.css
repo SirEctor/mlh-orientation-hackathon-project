@@ -142,7 +142,7 @@ a#fun-fact-hover:hover {
 
 a#work-link {
   color: inherit;
-  cursor: ne-resize;
+  cursor: pointer;
 }
 
 p.about-technologies-title {
