@@ -1,14 +1,6 @@
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-button {
-  font-family: "Roboto", serif;
-}
+ body, html {
+  font-family: 'Abel', sans-serif;
+ }
 
 * {
   margin: 0;
