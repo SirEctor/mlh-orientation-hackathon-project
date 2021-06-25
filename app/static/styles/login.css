@@ -470,6 +470,7 @@ input[type=password]:focus {
   margin-top: -180px;
   margin-left: -150px;
   color: white;
+  text-align: center;
 }
 
 html, body {
