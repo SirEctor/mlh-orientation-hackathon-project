@@ -59,7 +59,7 @@ def login():
 
     
 
-@app.route('/register/',methods = ['POST', 'GET'])
+@app.route('/register/', methods = ['POST', 'GET'])
 def register():
     #return render_template('index.html'), 200
     if request.method == 'POST':

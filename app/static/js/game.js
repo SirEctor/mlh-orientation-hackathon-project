@@ -34,8 +34,8 @@ const nextFrame = () => {
     platXCoor = Math.floor(Math.random() * (1500 - 200 + 3) + 150);
     platXCoors.push(platXCoor);
     
-    platYCoor = Math.floor(Math.random() * (500 - 20 + 5) + 300);
-    platYCoors.push(platYCoor);
+    // platYCoor = Math.floor(Math.random() * (500 - 20 + 5) + 300);
+    // platYCoors.push(platYCoor);
 
     obXCoor = Math.floor(Math.random() * (1165 - 140 + 1) + 140);
     obXCoors.push(obXCoor);
@@ -124,9 +124,9 @@ const loop = function () {  if (controller.up && square.jumping == false) {
 	    context.fill();
 	  })
 
-	  platXCoors.forEach((platXCoor,i) => {
+	  platXCoors.forEach((platXCoor) => {
 	    context.beginPath();
-            context.rect(platXCoor, platYCoors[i], 350, 50);
+            context.rect(platXCoor, 100, 350, 50);
             context.fill();
 	  })
 
