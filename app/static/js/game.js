@@ -3,9 +3,7 @@ const context = document.querySelector("canvas").getContext("2d");
 context.canvas.height = 400;
 context.canvas.width = 1220;
 
-context.fillStyle = "white";
-context.font = "50px Arial";
-context.fillText("Level 1", 100, 250);
+
 
 // Start the frame count at 1
 let frameCount = 1;
@@ -13,7 +11,8 @@ let frameCount = 1;
 let obCount = frameCount;
 // Create a collection to hold the generated x coordinates
 const obXCoors = [];
-
+const platXCoors = [];
+const platYCoors = [];
 
 const square = {  height: 32,
   jumping: true,
@@ -30,10 +29,14 @@ const square = {  height: 32,
 const nextFrame = () => {
   // increase the frame / "level" count
   frameCount++;
-  context.fillStyle = "white";
-  context.fillText("Level " + frameCount, 10, 50);
   for (let i = 0; i < obCount; i++) {
     // Randomly generate the x coordinate for the top corner start of the triangles
+    platXCoor = Math.floor(Math.random() * (1500 - 200 + 3) + 150);
+    platXCoors.push(platXCoor);
+    
+    platYCoor = Math.floor(Math.random() * (500 - 20 + 5) + 300);
+    platYCoors.push(platYCoor);
+
     obXCoor = Math.floor(Math.random() * (1165 - 140 + 1) + 140);
     obXCoors.push(obXCoor);
   }
@@ -84,7 +87,11 @@ const loop = function () {  if (controller.up && square.jumping == false) {
         }
 
         if (square.x < -20) { 
-              square.x = 1220; 
+              square.x = 1220;
+	      frameCount--;
+ 	      obXCoors.pop();
+	      platXCoors.pop();
+              platYCoors.pop();
         } else if (square.x > 1220) { 
          // if the square goes off the right 
         square.x = -20;
@@ -117,6 +124,12 @@ const loop = function () {  if (controller.up && square.jumping == false) {
 	    context.fill();
 	  })
 
+	  platXCoors.forEach((platXCoor,i) => {
+	    context.beginPath();
+            context.rect(platXCoor, platYCoors[i], 350, 50);
+            context.fill();
+	  })
+
 
          // Creates the "ground" for each frame 
           context.strokeStyle = "#2E2532"; 
@@ -126,6 +139,9 @@ const loop = function () {  if (controller.up && square.jumping == false) {
           context.lineTo(1220, 385); 
           context.stroke();
 
+	  context.font = "16px Arial";
+          context.fillStyle = "#ffffff";
+	  context.fillText("Level " + frameCount, 10, 30);
 	// Updates when called to tell the browser it is ready to draw again
 	 window.requestAnimationFrame(loop);
 

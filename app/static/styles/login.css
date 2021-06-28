@@ -14,7 +14,9 @@ button {
   margin: 0;
 }
 
-
+label {
+text-align: center;
+}
 /* Header */
 .header-sections {
   background-color: white;
@@ -288,6 +290,10 @@ ul.list-of-tech {
     width: 100%;
   }
 
+	
+  #loginSection{
+   text-align: center;
+  }
   .about-technology {
     margin: auto;
     width: 80%;
@@ -502,6 +508,7 @@ div.formCorrect {
   display:grid;
   grid-template-columns: max-content max-content;
   grid-gap:5px;
+  text-align: center;
 }
 div.formCorrect label       { text-align:left; }
 
