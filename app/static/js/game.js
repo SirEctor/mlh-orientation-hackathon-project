@@ -100,7 +100,7 @@ const loop = function () {  if (controller.up && square.jumping == false) {
 
         
           // Creates the backdrop for each frame 
-          context.fillStyle = "#201A23"; 
+          context.fillStyle = "#201A34"; 
           context.fillRect(0, 0, 1220, 400); // x, y, width, height
          // Creates and fills the cube for each frame 
           context.fillStyle = "#8DAA9D"; // hex for cube color 
