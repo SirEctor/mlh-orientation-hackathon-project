@@ -1,0 +1,1083 @@
+-- Logs begin at Mon 2021-06-28 13:35:09 UTC, end at Tue 2021-06-29 15:38:39 UTC. --
+Jun 28 21:35:40 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: [2021-06-28 21:35:41 +0000] [7308] [INFO] Starting gunicorn 20.1.0
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: [2021-06-28 21:35:41 +0000] [7308] [INFO] Listening at: http://127.0.0.1:5000 (7308)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: [2021-06-28 21:35:41 +0000] [7308] [INFO] Using worker: sync
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: [2021-06-28 21:35:41 +0000] [7311] [INFO] Booting worker with pid: 7311
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: [2021-06-28 21:35:41 +0000] [7311] [ERROR] Exception in worker process
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: Traceback (most recent call last):
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:     worker.init_process()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:     self.load_wsgi()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:     self.wsgi = self.app.wsgi()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:     self.callable = self.load()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:     return self.load_wsgiapp()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:     return util.import_app(self.app_uri)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:     mod = importlib.import_module(module)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: ModuleNotFoundError: No module named 'wsgi'
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: [2021-06-28 21:35:41 +0000] [7311] [INFO] Worker exiting (pid: 7311)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: [2021-06-28 21:35:41 +0000] [7308] [INFO] Shutting down: Master
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7308]: [2021-06-28 21:35:41 +0000] [7308] [INFO] Reason: Worker failed to boot.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 1.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: [2021-06-28 21:35:41 +0000] [7313] [INFO] Starting gunicorn 20.1.0
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: [2021-06-28 21:35:41 +0000] [7313] [INFO] Listening at: http://127.0.0.1:5000 (7313)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: [2021-06-28 21:35:41 +0000] [7313] [INFO] Using worker: sync
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: [2021-06-28 21:35:41 +0000] [7316] [INFO] Booting worker with pid: 7316
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: [2021-06-28 21:35:41 +0000] [7316] [ERROR] Exception in worker process
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: Traceback (most recent call last):
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:     worker.init_process()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:     self.load_wsgi()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:     self.wsgi = self.app.wsgi()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:     self.callable = self.load()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:     return self.load_wsgiapp()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:     return util.import_app(self.app_uri)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:     mod = importlib.import_module(module)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: ModuleNotFoundError: No module named 'wsgi'
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: [2021-06-28 21:35:41 +0000] [7316] [INFO] Worker exiting (pid: 7316)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: [2021-06-28 21:35:41 +0000] [7313] [INFO] Shutting down: Master
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7313]: [2021-06-28 21:35:41 +0000] [7313] [INFO] Reason: Worker failed to boot.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 2.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: [2021-06-28 21:35:41 +0000] [7318] [INFO] Starting gunicorn 20.1.0
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: [2021-06-28 21:35:41 +0000] [7318] [INFO] Listening at: http://127.0.0.1:5000 (7318)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: [2021-06-28 21:35:41 +0000] [7318] [INFO] Using worker: sync
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: [2021-06-28 21:35:41 +0000] [7321] [INFO] Booting worker with pid: 7321
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: [2021-06-28 21:35:41 +0000] [7321] [ERROR] Exception in worker process
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: Traceback (most recent call last):
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:     worker.init_process()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:     self.load_wsgi()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:     self.wsgi = self.app.wsgi()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:     self.callable = self.load()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:     return self.load_wsgiapp()
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:     return util.import_app(self.app_uri)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:     mod = importlib.import_module(module)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: ModuleNotFoundError: No module named 'wsgi'
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: [2021-06-28 21:35:41 +0000] [7321] [INFO] Worker exiting (pid: 7321)
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: [2021-06-28 21:35:41 +0000] [7318] [INFO] Shutting down: Master
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal bash[7318]: [2021-06-28 21:35:41 +0000] [7318] [INFO] Reason: Worker failed to boot.
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 28 21:35:41 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 3.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: [2021-06-28 21:35:42 +0000] [7323] [INFO] Starting gunicorn 20.1.0
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: [2021-06-28 21:35:42 +0000] [7323] [INFO] Listening at: http://127.0.0.1:5000 (7323)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: [2021-06-28 21:35:42 +0000] [7323] [INFO] Using worker: sync
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: [2021-06-28 21:35:42 +0000] [7326] [INFO] Booting worker with pid: 7326
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: [2021-06-28 21:35:42 +0000] [7326] [ERROR] Exception in worker process
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: Traceback (most recent call last):
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:     worker.init_process()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:     self.load_wsgi()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:     self.wsgi = self.app.wsgi()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:     self.callable = self.load()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:     return self.load_wsgiapp()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:     return util.import_app(self.app_uri)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:     mod = importlib.import_module(module)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: ModuleNotFoundError: No module named 'wsgi'
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: [2021-06-28 21:35:42 +0000] [7326] [INFO] Worker exiting (pid: 7326)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: [2021-06-28 21:35:42 +0000] [7323] [INFO] Shutting down: Master
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7323]: [2021-06-28 21:35:42 +0000] [7323] [INFO] Reason: Worker failed to boot.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 4.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7328] [INFO] Starting gunicorn 20.1.0
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7328] [INFO] Listening at: http://127.0.0.1:5000 (7328)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7328] [INFO] Using worker: sync
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7331] [INFO] Booting worker with pid: 7331
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7331] [ERROR] Exception in worker process
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: Traceback (most recent call last):
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     worker.init_process()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     self.load_wsgi()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     self.wsgi = self.app.wsgi()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     self.callable = self.load()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     return self.load_wsgiapp()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     return util.import_app(self.app_uri)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     mod = importlib.import_module(module)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: ModuleNotFoundError: No module named 'wsgi'
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7331] [INFO] Worker exiting (pid: 7331)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7332] [INFO] Booting worker with pid: 7332
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7332] [ERROR] Exception in worker process
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: Traceback (most recent call last):
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     worker.init_process()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     self.load_wsgi()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     self.wsgi = self.app.wsgi()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     self.callable = self.load()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     return self.load_wsgiapp()
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     return util.import_app(self.app_uri)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     mod = importlib.import_module(module)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: ModuleNotFoundError: No module named 'wsgi'
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7332] [INFO] Worker exiting (pid: 7332)
+Jun 28 21:35:42 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:42 +0000] [7328] [WARNING] Worker with pid 7332 was terminated due to signal 15
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:43 +0000] [7328] [INFO] Shutting down: Master
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal bash[7328]: [2021-06-28 21:35:43 +0000] [7328] [INFO] Reason: Worker failed to boot.
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 5.
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Start request repeated too quickly.
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 28 21:35:43 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Failed to start Gunicorn instance to serve my portfolio.
+Jun 29 15:09:09 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: [2021-06-29 15:09:10 +0000] [19008] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: [2021-06-29 15:09:10 +0000] [19008] [INFO] Listening at: http://127.0.0.1:5000 (19008)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: [2021-06-29 15:09:10 +0000] [19008] [INFO] Using worker: sync
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: [2021-06-29 15:09:10 +0000] [19011] [INFO] Booting worker with pid: 19011
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: [2021-06-29 15:09:10 +0000] [19011] [ERROR] Exception in worker process
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: Traceback (most recent call last):
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:     worker.init_process()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:     self.load_wsgi()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:     self.wsgi = self.app.wsgi()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:     self.callable = self.load()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:     return self.load_wsgiapp()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:     return util.import_app(self.app_uri)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:     mod = importlib.import_module(module)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: [2021-06-29 15:09:10 +0000] [19011] [INFO] Worker exiting (pid: 19011)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: [2021-06-29 15:09:10 +0000] [19008] [INFO] Shutting down: Master
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19008]: [2021-06-29 15:09:10 +0000] [19008] [INFO] Reason: Worker failed to boot.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 1.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: [2021-06-29 15:09:10 +0000] [19013] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: [2021-06-29 15:09:10 +0000] [19013] [INFO] Listening at: http://127.0.0.1:5000 (19013)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: [2021-06-29 15:09:10 +0000] [19013] [INFO] Using worker: sync
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: [2021-06-29 15:09:10 +0000] [19016] [INFO] Booting worker with pid: 19016
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: [2021-06-29 15:09:10 +0000] [19016] [ERROR] Exception in worker process
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: Traceback (most recent call last):
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:     worker.init_process()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:     self.load_wsgi()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:     self.wsgi = self.app.wsgi()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:     self.callable = self.load()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:     return self.load_wsgiapp()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:     return util.import_app(self.app_uri)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:     mod = importlib.import_module(module)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: [2021-06-29 15:09:10 +0000] [19016] [INFO] Worker exiting (pid: 19016)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: [2021-06-29 15:09:10 +0000] [19013] [INFO] Shutting down: Master
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19013]: [2021-06-29 15:09:10 +0000] [19013] [INFO] Reason: Worker failed to boot.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 2.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: [2021-06-29 15:09:10 +0000] [19018] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: [2021-06-29 15:09:10 +0000] [19018] [INFO] Listening at: http://127.0.0.1:5000 (19018)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: [2021-06-29 15:09:10 +0000] [19018] [INFO] Using worker: sync
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: [2021-06-29 15:09:10 +0000] [19021] [INFO] Booting worker with pid: 19021
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: [2021-06-29 15:09:10 +0000] [19021] [ERROR] Exception in worker process
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: Traceback (most recent call last):
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:     worker.init_process()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:     self.load_wsgi()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:     self.wsgi = self.app.wsgi()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:     self.callable = self.load()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:     return self.load_wsgiapp()
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:     return util.import_app(self.app_uri)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:     mod = importlib.import_module(module)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:09:10 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: [2021-06-29 15:09:10 +0000] [19021] [INFO] Worker exiting (pid: 19021)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: [2021-06-29 15:09:11 +0000] [19018] [INFO] Shutting down: Master
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19018]: [2021-06-29 15:09:11 +0000] [19018] [INFO] Reason: Worker failed to boot.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 3.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: [2021-06-29 15:09:11 +0000] [19023] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: [2021-06-29 15:09:11 +0000] [19023] [INFO] Listening at: http://127.0.0.1:5000 (19023)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: [2021-06-29 15:09:11 +0000] [19023] [INFO] Using worker: sync
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: [2021-06-29 15:09:11 +0000] [19026] [INFO] Booting worker with pid: 19026
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: [2021-06-29 15:09:11 +0000] [19026] [ERROR] Exception in worker process
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: Traceback (most recent call last):
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:     worker.init_process()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:     self.load_wsgi()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:     self.wsgi = self.app.wsgi()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:     self.callable = self.load()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:     return self.load_wsgiapp()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:     return util.import_app(self.app_uri)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:     mod = importlib.import_module(module)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: [2021-06-29 15:09:11 +0000] [19026] [INFO] Worker exiting (pid: 19026)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: [2021-06-29 15:09:11 +0000] [19023] [INFO] Shutting down: Master
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19023]: [2021-06-29 15:09:11 +0000] [19023] [INFO] Reason: Worker failed to boot.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 4.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: [2021-06-29 15:09:11 +0000] [19028] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: [2021-06-29 15:09:11 +0000] [19028] [INFO] Listening at: http://127.0.0.1:5000 (19028)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: [2021-06-29 15:09:11 +0000] [19028] [INFO] Using worker: sync
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: [2021-06-29 15:09:11 +0000] [19031] [INFO] Booting worker with pid: 19031
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: [2021-06-29 15:09:11 +0000] [19031] [ERROR] Exception in worker process
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: Traceback (most recent call last):
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:     worker.init_process()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:     self.load_wsgi()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:     self.wsgi = self.app.wsgi()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:     self.callable = self.load()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:     return self.load_wsgiapp()
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:     return util.import_app(self.app_uri)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:     mod = importlib.import_module(module)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: [2021-06-29 15:09:11 +0000] [19031] [INFO] Worker exiting (pid: 19031)
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: [2021-06-29 15:09:11 +0000] [19028] [INFO] Shutting down: Master
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal bash[19028]: [2021-06-29 15:09:11 +0000] [19028] [INFO] Reason: Worker failed to boot.
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:09:11 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:09:12 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:09:12 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 5.
+Jun 29 15:09:12 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:09:12 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Start request repeated too quickly.
+Jun 29 15:09:12 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:09:12 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Failed to start Gunicorn instance to serve my portfolio.
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: [2021-06-29 15:36:54 +0000] [19781] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: [2021-06-29 15:36:54 +0000] [19781] [INFO] Listening at: http://127.0.0.1:5000 (19781)
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: [2021-06-29 15:36:54 +0000] [19781] [INFO] Using worker: sync
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: [2021-06-29 15:36:54 +0000] [19784] [INFO] Booting worker with pid: 19784
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: [2021-06-29 15:36:54 +0000] [19784] [ERROR] Exception in worker process
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: Traceback (most recent call last):
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:     worker.init_process()
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:     self.load_wsgi()
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:     self.wsgi = self.app.wsgi()
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:     self.callable = self.load()
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:     return self.load_wsgiapp()
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:     return util.import_app(self.app_uri)
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:     mod = importlib.import_module(module)
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: [2021-06-29 15:36:54 +0000] [19784] [INFO] Worker exiting (pid: 19784)
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: [2021-06-29 15:36:54 +0000] [19781] [INFO] Shutting down: Master
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal bash[19781]: [2021-06-29 15:36:54 +0000] [19781] [INFO] Reason: Worker failed to boot.
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:36:54 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 1.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: [2021-06-29 15:36:55 +0000] [19786] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: [2021-06-29 15:36:55 +0000] [19786] [INFO] Listening at: http://127.0.0.1:5000 (19786)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: [2021-06-29 15:36:55 +0000] [19786] [INFO] Using worker: sync
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: [2021-06-29 15:36:55 +0000] [19791] [INFO] Booting worker with pid: 19791
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: [2021-06-29 15:36:55 +0000] [19791] [ERROR] Exception in worker process
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: Traceback (most recent call last):
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:     worker.init_process()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:     self.load_wsgi()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:     self.wsgi = self.app.wsgi()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:     self.callable = self.load()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:     return self.load_wsgiapp()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:     return util.import_app(self.app_uri)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:     mod = importlib.import_module(module)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: [2021-06-29 15:36:55 +0000] [19791] [INFO] Worker exiting (pid: 19791)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: [2021-06-29 15:36:55 +0000] [19786] [INFO] Shutting down: Master
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19786]: [2021-06-29 15:36:55 +0000] [19786] [INFO] Reason: Worker failed to boot.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 2.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: [2021-06-29 15:36:55 +0000] [19793] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: [2021-06-29 15:36:55 +0000] [19793] [INFO] Listening at: http://127.0.0.1:5000 (19793)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: [2021-06-29 15:36:55 +0000] [19793] [INFO] Using worker: sync
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: [2021-06-29 15:36:55 +0000] [19796] [INFO] Booting worker with pid: 19796
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: [2021-06-29 15:36:55 +0000] [19796] [ERROR] Exception in worker process
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: Traceback (most recent call last):
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:     worker.init_process()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:     self.load_wsgi()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:     self.wsgi = self.app.wsgi()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:     self.callable = self.load()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:     return self.load_wsgiapp()
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:     return util.import_app(self.app_uri)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:     mod = importlib.import_module(module)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:36:55 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: [2021-06-29 15:36:55 +0000] [19796] [INFO] Worker exiting (pid: 19796)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: [2021-06-29 15:36:56 +0000] [19793] [INFO] Shutting down: Master
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19793]: [2021-06-29 15:36:56 +0000] [19793] [INFO] Reason: Worker failed to boot.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 3.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: [2021-06-29 15:36:56 +0000] [19798] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: [2021-06-29 15:36:56 +0000] [19798] [INFO] Listening at: http://127.0.0.1:5000 (19798)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: [2021-06-29 15:36:56 +0000] [19798] [INFO] Using worker: sync
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: [2021-06-29 15:36:56 +0000] [19801] [INFO] Booting worker with pid: 19801
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: [2021-06-29 15:36:56 +0000] [19801] [ERROR] Exception in worker process
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: Traceback (most recent call last):
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:     worker.init_process()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:     self.load_wsgi()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:     self.wsgi = self.app.wsgi()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:     self.callable = self.load()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:     return self.load_wsgiapp()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:     return util.import_app(self.app_uri)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:     mod = importlib.import_module(module)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: [2021-06-29 15:36:56 +0000] [19801] [INFO] Worker exiting (pid: 19801)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: [2021-06-29 15:36:56 +0000] [19798] [INFO] Shutting down: Master
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19798]: [2021-06-29 15:36:56 +0000] [19798] [INFO] Reason: Worker failed to boot.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 4.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: [2021-06-29 15:36:56 +0000] [19803] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: [2021-06-29 15:36:56 +0000] [19803] [INFO] Listening at: http://127.0.0.1:5000 (19803)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: [2021-06-29 15:36:56 +0000] [19803] [INFO] Using worker: sync
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: [2021-06-29 15:36:56 +0000] [19806] [INFO] Booting worker with pid: 19806
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: [2021-06-29 15:36:56 +0000] [19806] [ERROR] Exception in worker process
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: Traceback (most recent call last):
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:     worker.init_process()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:     self.load_wsgi()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:     self.wsgi = self.app.wsgi()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:     self.callable = self.load()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:     return self.load_wsgiapp()
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:     return util.import_app(self.app_uri)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:     mod = importlib.import_module(module)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]:   File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: ModuleNotFoundError: No module named 'wsgi'
+Jun 29 15:36:56 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: [2021-06-29 15:36:56 +0000] [19806] [INFO] Worker exiting (pid: 19806)
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: [2021-06-29 15:36:57 +0000] [19803] [INFO] Shutting down: Master
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal bash[19803]: [2021-06-29 15:36:57 +0000] [19803] [INFO] Reason: Worker failed to boot.
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 5.
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Start request repeated too quickly.
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:36:57 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Failed to start Gunicorn instance to serve my portfolio.
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: [2021-06-29 15:38:34 +0000] [19879] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: [2021-06-29 15:38:34 +0000] [19879] [INFO] Listening at: http://127.0.0.1:5000 (19879)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: [2021-06-29 15:38:34 +0000] [19879] [INFO] Using worker: sync
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: [2021-06-29 15:38:34 +0000] [19882] [INFO] Booting worker with pid: 19882
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: [2021-06-29 15:38:34 +0000] [19882] [ERROR] Exception in worker process
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: Traceback (most recent call last):
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     worker.init_process()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     self.load_wsgi()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     self.callable = self.load()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     return self.load_wsgiapp()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     return util.import_app(self.app_uri)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     mod = importlib.import_module(module)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]:     from app import app
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: [2021-06-29 15:38:34 +0000] [19882] [INFO] Worker exiting (pid: 19882)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: [2021-06-29 15:38:34 +0000] [19879] [INFO] Shutting down: Master
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19879]: [2021-06-29 15:38:34 +0000] [19879] [INFO] Reason: Worker failed to boot.
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 1.
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: [2021-06-29 15:38:34 +0000] [19885] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: [2021-06-29 15:38:34 +0000] [19885] [INFO] Listening at: http://127.0.0.1:5000 (19885)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: [2021-06-29 15:38:34 +0000] [19885] [INFO] Using worker: sync
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: [2021-06-29 15:38:34 +0000] [19888] [INFO] Booting worker with pid: 19888
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: [2021-06-29 15:38:34 +0000] [19888] [ERROR] Exception in worker process
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: Traceback (most recent call last):
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     worker.init_process()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     self.load_wsgi()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     self.callable = self.load()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     return self.load_wsgiapp()
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     return util.import_app(self.app_uri)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     mod = importlib.import_module(module)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]:     from app import app
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:34 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: [2021-06-29 15:38:34 +0000] [19888] [INFO] Worker exiting (pid: 19888)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: [2021-06-29 15:38:35 +0000] [19885] [INFO] Shutting down: Master
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19885]: [2021-06-29 15:38:35 +0000] [19885] [INFO] Reason: Worker failed to boot.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 2.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: [2021-06-29 15:38:35 +0000] [19890] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: [2021-06-29 15:38:35 +0000] [19890] [INFO] Listening at: http://127.0.0.1:5000 (19890)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: [2021-06-29 15:38:35 +0000] [19890] [INFO] Using worker: sync
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: [2021-06-29 15:38:35 +0000] [19893] [INFO] Booting worker with pid: 19893
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: [2021-06-29 15:38:35 +0000] [19893] [ERROR] Exception in worker process
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: Traceback (most recent call last):
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     worker.init_process()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     self.load_wsgi()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     self.callable = self.load()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     return self.load_wsgiapp()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     return util.import_app(self.app_uri)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     mod = importlib.import_module(module)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]:     from app import app
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: [2021-06-29 15:38:35 +0000] [19893] [INFO] Worker exiting (pid: 19893)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: [2021-06-29 15:38:35 +0000] [19890] [INFO] Shutting down: Master
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19890]: [2021-06-29 15:38:35 +0000] [19890] [INFO] Reason: Worker failed to boot.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 3.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: [2021-06-29 15:38:35 +0000] [19895] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: [2021-06-29 15:38:35 +0000] [19895] [INFO] Listening at: http://127.0.0.1:5000 (19895)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: [2021-06-29 15:38:35 +0000] [19895] [INFO] Using worker: sync
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: [2021-06-29 15:38:35 +0000] [19898] [INFO] Booting worker with pid: 19898
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: [2021-06-29 15:38:35 +0000] [19898] [ERROR] Exception in worker process
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: Traceback (most recent call last):
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     worker.init_process()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     self.load_wsgi()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     self.callable = self.load()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     return self.load_wsgiapp()
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     return util.import_app(self.app_uri)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     mod = importlib.import_module(module)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]:     from app import app
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:35 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: [2021-06-29 15:38:35 +0000] [19898] [INFO] Worker exiting (pid: 19898)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: [2021-06-29 15:38:36 +0000] [19895] [INFO] Shutting down: Master
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19895]: [2021-06-29 15:38:36 +0000] [19895] [INFO] Reason: Worker failed to boot.
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 4.
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19900] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19900] [INFO] Listening at: http://127.0.0.1:5000 (19900)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19900] [INFO] Using worker: sync
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19933] [INFO] Booting worker with pid: 19933
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19933] [ERROR] Exception in worker process
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: Traceback (most recent call last):
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     worker.init_process()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.load_wsgi()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.callable = self.load()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     return self.load_wsgiapp()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     return util.import_app(self.app_uri)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     mod = importlib.import_module(module)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     from app import app
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19933] [INFO] Worker exiting (pid: 19933)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19934] [INFO] Booting worker with pid: 19934
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19934] [ERROR] Exception in worker process
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: Traceback (most recent call last):
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     worker.init_process()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.load_wsgi()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.callable = self.load()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     return self.load_wsgiapp()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     return util.import_app(self.app_uri)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     mod = importlib.import_module(module)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     from app import app
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: [2021-06-29 15:38:36 +0000] [19934] [INFO] Worker exiting (pid: 19934)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: Traceback (most recent call last):
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 202, in run
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.manage_workers()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 551, in manage_workers
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.spawn_workers()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 623, in spawn_workers
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     time.sleep(0.1 * random.random())
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.reap_workers()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: During handling of the above exception, another exception occurred:
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: Traceback (most recent call last):
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/bin/gunicorn", line 11, in <module>
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     sys.exit(run())
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 231, in run
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     super().run()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 72, in run
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     Arbiter(self).run()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 229, in run
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.halt(reason=inst.reason, exit_status=inst.exit_status)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 342, in halt
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.stop()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 393, in stop
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     time.sleep(0.1)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     self.reap_workers()
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal bash[19900]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=1/FAILURE
+Jun 29 15:38:36 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 5.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19936] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19936] [INFO] Listening at: http://127.0.0.1:5000 (19936)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19936] [INFO] Using worker: sync
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19939] [INFO] Booting worker with pid: 19939
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19939] [ERROR] Exception in worker process
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: Traceback (most recent call last):
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     worker.init_process()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.load_wsgi()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.callable = self.load()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     return self.load_wsgiapp()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     return util.import_app(self.app_uri)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     mod = importlib.import_module(module)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     from app import app
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19939] [INFO] Worker exiting (pid: 19939)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19940] [INFO] Booting worker with pid: 19940
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19940] [ERROR] Exception in worker process
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: Traceback (most recent call last):
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     worker.init_process()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.load_wsgi()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.callable = self.load()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     return self.load_wsgiapp()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     return util.import_app(self.app_uri)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     mod = importlib.import_module(module)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     from app import app
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: [2021-06-29 15:38:37 +0000] [19940] [INFO] Worker exiting (pid: 19940)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: Traceback (most recent call last):
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 202, in run
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.manage_workers()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 551, in manage_workers
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.spawn_workers()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 623, in spawn_workers
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     time.sleep(0.1 * random.random())
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.reap_workers()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: During handling of the above exception, another exception occurred:
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: Traceback (most recent call last):
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/bin/gunicorn", line 11, in <module>
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     sys.exit(run())
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 231, in run
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     super().run()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 72, in run
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     Arbiter(self).run()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 229, in run
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.halt(reason=inst.reason, exit_status=inst.exit_status)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 342, in halt
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.stop()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 393, in stop
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     time.sleep(0.1)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     self.reap_workers()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 525, in reap_workers
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19936]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=1/FAILURE
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 6.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: [2021-06-29 15:38:37 +0000] [19942] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: [2021-06-29 15:38:37 +0000] [19942] [INFO] Listening at: http://127.0.0.1:5000 (19942)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: [2021-06-29 15:38:37 +0000] [19942] [INFO] Using worker: sync
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: [2021-06-29 15:38:37 +0000] [19945] [INFO] Booting worker with pid: 19945
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: [2021-06-29 15:38:37 +0000] [19945] [ERROR] Exception in worker process
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: Traceback (most recent call last):
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     worker.init_process()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     self.load_wsgi()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     self.callable = self.load()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     return self.load_wsgiapp()
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     return util.import_app(self.app_uri)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     mod = importlib.import_module(module)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]:     from app import app
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: [2021-06-29 15:38:37 +0000] [19945] [INFO] Worker exiting (pid: 19945)
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: [2021-06-29 15:38:37 +0000] [19942] [INFO] Shutting down: Master
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal bash[19942]: [2021-06-29 15:38:37 +0000] [19942] [INFO] Reason: Worker failed to boot.
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:38:37 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 7.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: [2021-06-29 15:38:38 +0000] [19947] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: [2021-06-29 15:38:38 +0000] [19947] [INFO] Listening at: http://127.0.0.1:5000 (19947)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: [2021-06-29 15:38:38 +0000] [19947] [INFO] Using worker: sync
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: [2021-06-29 15:38:38 +0000] [19950] [INFO] Booting worker with pid: 19950
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: [2021-06-29 15:38:38 +0000] [19950] [ERROR] Exception in worker process
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: Traceback (most recent call last):
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     worker.init_process()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     self.load_wsgi()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     self.callable = self.load()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     return self.load_wsgiapp()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     return util.import_app(self.app_uri)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     mod = importlib.import_module(module)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]:     from app import app
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: [2021-06-29 15:38:38 +0000] [19950] [INFO] Worker exiting (pid: 19950)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: [2021-06-29 15:38:38 +0000] [19947] [INFO] Shutting down: Master
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19947]: [2021-06-29 15:38:38 +0000] [19947] [INFO] Reason: Worker failed to boot.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 8.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: [2021-06-29 15:38:38 +0000] [19952] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: [2021-06-29 15:38:38 +0000] [19952] [INFO] Listening at: http://127.0.0.1:5000 (19952)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: [2021-06-29 15:38:38 +0000] [19952] [INFO] Using worker: sync
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: [2021-06-29 15:38:38 +0000] [19955] [INFO] Booting worker with pid: 19955
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: [2021-06-29 15:38:38 +0000] [19955] [ERROR] Exception in worker process
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: Traceback (most recent call last):
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     worker.init_process()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     self.load_wsgi()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     self.callable = self.load()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     return self.load_wsgiapp()
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     return util.import_app(self.app_uri)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     mod = importlib.import_module(module)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]:     from app import app
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: [2021-06-29 15:38:38 +0000] [19955] [INFO] Worker exiting (pid: 19955)
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: [2021-06-29 15:38:38 +0000] [19952] [INFO] Shutting down: Master
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal bash[19952]: [2021-06-29 15:38:38 +0000] [19952] [INFO] Reason: Worker failed to boot.
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:38:38 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 9.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Started Gunicorn instance to serve my portfolio.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: [2021-06-29 15:38:39 +0000] [19957] [INFO] Starting gunicorn 20.1.0
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: [2021-06-29 15:38:39 +0000] [19957] [INFO] Listening at: http://127.0.0.1:5000 (19957)
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: [2021-06-29 15:38:39 +0000] [19957] [INFO] Using worker: sync
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: [2021-06-29 15:38:39 +0000] [19960] [INFO] Booting worker with pid: 19960
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: [2021-06-29 15:38:39 +0000] [19960] [ERROR] Exception in worker process
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: Traceback (most recent call last):
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     worker.init_process()
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 134, in init_process
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     self.load_wsgi()
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     self.wsgi = self.app.wsgi()
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     self.callable = self.load()
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     return self.load_wsgiapp()
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     return util.import_app(self.app_uri)
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/home/centos/flask-blog/python3-virtualenv/lib64/python3.6/site-packages/gunicorn/util.py", line 359, in import_app
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     mod = importlib.import_module(module)
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     return _bootstrap._gcd_import(name[level:], package, level)
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:   File "/home/centos/flask-blog/wsgi.py", line 1, in <module>
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]:     from app import app
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: ModuleNotFoundError: No module named 'app'
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: [2021-06-29 15:38:39 +0000] [19960] [INFO] Worker exiting (pid: 19960)
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: [2021-06-29 15:38:39 +0000] [19957] [INFO] Shutting down: Master
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal bash[19957]: [2021-06-29 15:38:39 +0000] [19957] [INFO] Reason: Worker failed to boot.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Service RestartSec=100ms expired, scheduling restart.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Scheduled restart job, restart counter is at 10.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Stopped Gunicorn instance to serve my portfolio.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Start request repeated too quickly.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: myportfolio.service: Failed with result 'exit-code'.
+Jun 29 15:38:39 ip-172-31-33-210.us-east-2.compute.internal systemd[1]: Failed to start Gunicorn instance to serve my portfolio.
