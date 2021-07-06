@@ -10,7 +10,7 @@ on:
     branches:
       - master
 
-job:
+jobs:
   run-linters:
     name: Run linters
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ job:
       - name: Set up Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.6
+          python-version: 3.8
 
       - name: Install Python dependencies
         run: pip install black flake8
