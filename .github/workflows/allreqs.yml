@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  :
+  bake-all:
     runs-on: ubuntu-latest
 
     steps:
