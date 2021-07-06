@@ -1,0 +1,32 @@
+name: Lint
+
+on: 
+  #Triggers workflow either on push or pull request
+  #only on master branch
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+job:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+      - name: Install Python dependencies
+        run: pip3 install black flake8
+
+      - name: Run linters 
+        uses:wearerequired/lint-action@v1.10.0
+        with:
+          black: true
+          flake8: true
