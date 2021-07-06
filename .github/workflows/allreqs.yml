@@ -12,7 +12,6 @@ on:
 jobs:
   bake-all:
     runs-on: ubuntu-latest
-
     steps:
       - name: "checks out the git repo"
         uses: actions/checkout@v2
@@ -29,6 +28,6 @@ jobs:
         uses: docker/setup-buildx-action@v1
      
       - name: "build docker, push"
-        uses: docker/back-action@master
+        uses: docker/bake-action@master
         with:
           push: false
