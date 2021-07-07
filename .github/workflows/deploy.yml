@@ -33,5 +33,19 @@ jobs:
       - name: Deploy Site And Print Containers
         run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && git fetch && git reset --hard origin2/master && docker-compose up -d --build && docker-compose ps'
 
+      - name: My backup step
+        if: ${{ failure() }}
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
+      
       - name: Inform on Discord
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
+        
+      - name: "checks out the git repo"
+        uses: actions/checkout@v2
+        
+      - name: "run bash test script"
+        uses: bash prod-test.sh
+        
+      - name: My backup step for script
+        if: ${{ failure() }}
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Bash Script Failed"
