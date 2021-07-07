@@ -6,12 +6,15 @@ from flask_migrate import Migrate
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}".format(
+app.config[
+    "SQLALCHEMY_DATABASE_URI"
+] = "postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}".format(
 	user=os.getenv("POSTGRES_USER"),
         passwd=os.getenv("POSTGRES_PASSWORD"),
 	host=os.getenv("POSTGRES_HOST"),
 	port=5432,
-	table=os.getenv("POSTGRES_DB"))
+	table=os.getenv("POSTGRES_DB")
+)
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
@@ -71,7 +74,7 @@ def login():
     return render_template("login.html"), 200
  
     
-@app.route("/register/", methods = ["POST", "GET"])
+@app.route("/register/", methods=["POST", "GET"])
 def register():
     if request.method == "POST":
         username = request.form["username"]
@@ -86,17 +89,17 @@ def register():
             error = f"User {username} is already registered."
 
         if error is None:
-            new_user =  UserModel(username, generate_password_hash(password))
+            new_user = UserModel(username, generate_password_hash(password))
             db.session.add(new_user)
             db.session.commit()
             return f"User {username} created successfully"
         else:
-            return error,418
+            return error, 418
     return render_template("register.html"), 200
 
  
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template("index.html",  url=os.getenv("URL"))
+    return render_template("index.html", url=os.getenv("URL"))
 
 
