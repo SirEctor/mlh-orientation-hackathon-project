@@ -32,3 +32,6 @@ jobs:
 
       - name: Deploy Site And Print Containers
         run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && git fetch && git reset --hard origin2/master && docker-compose up -d --build && docker-compose ps'
+
+      - name: Inform on Discord
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
