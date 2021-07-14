@@ -32,3 +32,6 @@ jobs:
         with:
           black: true
           flake8: true
+          flake8_args: "--max-line-length=88 --ignore=W291"
+          auto_fix: true
+          exclude: "migrations/*"
