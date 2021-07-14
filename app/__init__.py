@@ -13,13 +13,14 @@ app.config[
     passwd=os.getenv("POSTGRES_PASSWORD"),
     host=os.getenv("POSTGRES_HOST"),
     port=5432,
-    table=os.getenv("POSTGRES_DB")
+    table=os.getenv("POSTGRES_DB"),
 )
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+
 
 class UserModel(db.Model):
     __tablename__ = "users"
@@ -39,23 +40,29 @@ class UserModel(db.Model):
 def game():
     return render_template("game.html")
 
+
 @app.route("/contact/")
 def contact():
     return redirect("https://http.cat/501")
 
+
 @app.route("/about/")
 def about():
     return render_template("about.html")
+
+
 @app.route("/projects/")
 def project():
     return render_template("projects.html")
+
 
 @app.route("/health")
 def all_good():
     return render_template("index.html"), 200
 
+
 @app.route("/login/", methods=["GET", "POST"])
-def login():    
+def login():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
@@ -68,12 +75,12 @@ def login():
             error = "Incorrect password."
 
         if error is None:
-            return "Login Successful", 200 
+            return "Login Successful", 200
         else:
             return error, 418
     return render_template("login.html"), 200
- 
-    
+
+
 @app.route("/register/", methods=["POST", "GET"])
 def register():
     if request.method == "POST":
@@ -97,7 +104,7 @@ def register():
             return error, 418
     return render_template("register.html"), 200
 
- 
+
 @app.route("/")
 def index():
     return render_template("index.html", url=os.getenv("URL"))
