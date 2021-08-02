@@ -51,7 +51,7 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/projects/")
+@app.route("/projects")
 def project():
     return render_template("projects.html")
 
